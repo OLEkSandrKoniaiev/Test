@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to Lviv!</title>
+    <link rel="stylesheet" type="text/css" href="styles.css"> 
+    <style>
+        body {
+            height: 800px;
+            background-blend-mode: overlay;
+            background-size: cover;
+            margin: 0;
+        }
+        
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 110px;
+      background-color: #FFFFFF;
+      padding-left: 20px;
+      display: flex;
+      align-items: center;
+      z-index: 999;
+      opacity: 0.9;
+    }
+
+     nav img {
+       width: 224.32px;
+       height: 70px;
+       margin-right: 45px;
+     }
+
+    nav a {
+            font-family: 'Montserrat';
+            font-weight: normal;
+            font-size: 36px;
+            color: #000000;
+            margin-top: 31px;
+           margin-right: 45px;
+           text-decoration: none;
+    }
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-image: url(image/background.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .welcome1 {
+            width: 950px;
+            height: 45px;
+            margin-top: 160px;
+            margin-bottom: 20px;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            text-align: center;
+            font-size: 64px;
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 800;
+            color: #FFFFFF;
+        }
+        
+        .welcome2 {
+            width: 861px;
+            height: 179px;
+            margin-top: 20px;
+            margin-bottom: 75px;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            text-align: center;
+            font-size: 256px;
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 800;
+
+            leading-trim: both;
+            text-edge: cap;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            
+            background: linear-gradient(180deg, #FFFFFF 55.00%, rgba(255, 255, 255, 0) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+        
+        .interesting_places {
+            width: 1400px;
+            height: auto;
+            border-radius: 40px;
+            background: #FFFFFF;
+            margin-bottom: 75px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .interesting_places h1 {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 96px;
+            line-height: 117px;
+            color: #4B4B4B;
+        }
+        
+        .interesting_places h2 {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 39px;
+            color: #878787;
+        }
+        
+        .interesting_places_row {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        
+        .interesting_places_mini_content {
+            width: 50%;
+            text-align: center;
+            margin: 25px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .interesting_places_content_row {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+        
+        .interesting_places_mini_content_image {
+            max-width: 530px;
+            height: auto;
+            border-radius: 20px;
+            transition: transform 0.3s ease;
+        }
+        
+        .interesting_places_mini_content_image:hover {
+            transform: scale(1.2);
+        }
+        
+        .interesting_places_mini_content a {
+            text-align: center;
+            word-wrap: break-word;
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 29px;
+            color: #292929;
+            text-decoration: none;
+        }
+        
+        .welcome3 {
+            width: 950px;
+            height: 179px;
+            margin-bottom: 75px;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            text-align: center;
+            font-size: 240px;
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .about_us {
+            width: 1400px;
+            height: auto;
+            border-radius: 40px;
+            background: #FFFFFF;
+            margin-bottom: 75px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .about_us h2 {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 96px;
+            line-height: 117px;
+            color: #4B4B4B;
+        }
+        
+        .about_us p {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 32px;
+            line-height: 39px;
+            color: #000000;
+        }
+
+       .about_us_row_text {
+                    font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 32px;
+            line-height: 39px;
+            color: #000000;
+            margin-left:40px;
+       }
+        
+        .about_us_row {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        
+        .about_us_line {
+            width: 100%;
+            height: 1px;
+            background-color: black;
+            margin: 0 20px;
+        }
+        
+        .about_us_mini_content {
+            width: 25%;
+            text-align: center;
+            margin: 25px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .about_us_mini_content_row {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+        
+        .about_us_mini_content_image {
+            max-width: 200px;
+            height: auto;
+            transition: transform 0.1s ease;
+        }
+        
+        .about_us_mini_content_image:hover {
+            transform: rotate(10deg);
+        }
+        
+        .about_us_mini_content_number {
+            text-align: center;
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 48px;
+            color: #000000;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        
+        .about_us_mini_content_text {
+            text-align: center;
+            word-wrap: break-word;
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 32px;
+            color: #000000;
+        }
+        
+        .welcome4 {
+            width: 1520px;
+            height: 179px;
+            margin-bottom: 75px;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            text-align: center;
+            font-size: 240px;
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .contactContainer {
+            height: auto;
+            max-width: 1400px;
+            width: 1400px;
+            margin: 0 auto;
+            padding: 40px 10px;
+            background: #FFFFFF;
+            border: 1px solid #ccc;
+            border-radius: 40px;
+        }
+        
+        .row {
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            margin-left: 10px;
+            margin-right: 10px;
+            
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        input {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        input[type="text"] {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 24px;
+            width: 100%;
+            padding: 20px;
+            border: 1px solid #000000;
+            border-radius: 38.5px;
+        }
+        
+        .submit-btn {
+            width: 602px;
+            height: 70px;
+            background: linear-gradient(90.92deg, #84C4FF 0%, #C68EFF 101.47%);
+            box-shadow: 5px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 38.5px;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 29px;
+            margin: 0 auto;
+            transition: transform 0.2s;
+            color: #000000;
+        }
+        
+        .submit-btn:hover {
+            transform: scale(1.1);
+        }
+        
+        .submit-btn:active {
+            transform: scale(0.9);
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #555;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+
+        .footer p {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 24px;
+            flex-basis: 50%;
+        }
+        
+        .item {
+            width: 1450px;
+            height: 1200px;
+            background: #FFFFFF;
+            margin-bottom: 75px;
+        }
+
+.zoomed {
+  transform: scale(1.2);
+}
+
+.zooomed {
+  transform: scale(1.2);
+}
+
+    </style>
+
+    <script>
+
+function zoomImage(image, newSrc) {
+  image.classList.add("zoomed");
+  image.src = newSrc;
+}
+
+function restoreImage(image, originalSrc) {
+  image.classList.remove("zoomed");
+  image.src = originalSrc;
+}
+
+    function openPopup() {
+        var width = 300;
+        var height = 200;
+        var left = (window.innerWidth - width) / 2;
+        var top = (window.innerHeight - height) / 2;
+        window.open('OK.html', 'We are working🛠', 'width=' + width + ',height=' + height + ',left=' + left + ',top=' + top);
+    }
+    </script>
+
+</head>
+<body>
+    <nav>
+      <img src="image/logo.png" alt="Logo" width="141" height="44" >
+      <a href="#section_holovna">Головна</a>
+      <a href="#section_pro_nas">Про нас</a>
+      <a href="#section_contacty">Контакти</a>
+      <a href="order.html">Замовити</a>
+    </nav>
+
+    <div class="container">
+        
+        
+        <div class="welcome1">
+            <p>ПОДОРОЖУЙ ТА ВИВЧАЙ</p>
+        </div>
+        
+        
+        <div class="welcome2">
+            <p>ЛЬВІВ</p>
+        </div>
+        
+        
+        <div id="section_holovna" class="interesting_places">
+            <div class="interesting_places_row">
+                <h1>ЦІКАВІ МІСЦЯ</h1>
+            </div>
+            <div class="interesting_places_row">
+                <h2>СЬОГОДНІ</h2>
+            </div>
+            <div class="interesting_places_row">
+                <div class="interesting_places_mini_content">
+                    <div class="interesting_places_mini_content_row">
+                        <img class="interesting_places_mini_content_image" src="image/old_ura.png" alt="Image" onmouseover="zoomImage(this, 'image/ura.png')" onmouseout="restoreImage(this, 'image/old_ura.png')">
+                    </div>
+                    <div class="interesting_places_mini_content_row">
+                        <a href="case.html">Собор святого Юра</a>
+                    </div>
+                </div>
+                <div class="interesting_places_mini_content">
+                    <div class="interesting_places_mini_content_row">
+                        <img class="interesting_places_mini_content_image" src="image/old_opera.png" alt="Image" onmouseover="zoomImage(this, 'image/opera.png')" onmouseout="restoreImage(this, 'image/old_opera.png')">
+                    </div>
+                    <div class="interesting_places_mini_content_row">
+                        <a href="case.html">Львівська Національна опера</a>
+                    </div>
+                </div>
+            </div>
+            <div class="interesting_places_row">
+                <div class="interesting_places_mini_content">
+                    <div class="interesting_places_mini_content_row">
+                        <img class="interesting_places_mini_content_image" src="image/old_politeh.png" alt="Image" onmouseover="zoomImage(this, 'image/politeh.png')" onmouseout="restoreImage(this, 'image/old_politeh.png')">
+                    </div>
+                    <div class="interesting_places_mini_content_row">
+                        <a href="case.html">Національний університет "Львівська політехніка"</a>
+                    </div>
+                </div>
+                <div class="interesting_places_mini_content">
+                    <div class="interesting_places_mini_content_row">
+                        <img class="interesting_places_mini_content_image" src="image/old_muz.png" alt="Image" onmouseover="zoomImage(this, 'image/muz.png')" onmouseout="restoreImage(this, 'image/old_muz.png')">
+                    </div>
+                    <div class="interesting_places_mini_content_row">
+                        <a href="case.html">Музей Шептицького</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="welcome3">
+            <p>ОУН-М</p>
+        </div>
+        
+        
+        <div id="section_pro_nas" class="about_us">
+
+        <div class="about_us_row">
+                <h2>ПРО НАС</h2>
+        </div>
+        <div class="about_us_row">
+            <div class="about_us_line"></div>
+        </div>
+        <div class="about_us_row">
+            <p class="about_us_row_text">Ласкаво просимо до нашого сайту, присвяченого подорожам та вивченню місті Львова! Ми - команда ентузіастів, яка хоче поділитися з вами найкращими враженнями та цікавинками про мальовниче місто Львів. Наша основна мета - допомогти вам дізнатися більше про це культурне та історичне місце, щоб ваше відвідування стало незабутнім досвідом.</p>
+        </div>
+        <div class="about_us_row">
+            <div class="about_us_line"></div>
+        </div>
+        <div class="about_us_row">
+            <div class="about_us_mini_content">
+                <div class="about_us_mini_content_row">
+                    <img class="about_us_mini_content_image" src="image/Clock.svg" alt="Image">
+                </div>
+                <div class="about_us_mini_content_row">
+                    <h3 class="about_us_mini_content_number">3</h3>
+                </div>
+                <div class="about_us_mini_content_row">
+                    <p class="about_us_mini_content_text">місяці досвіду</p>
+                </div>
+            </div>
+            <div class="about_us_mini_content">
+                <div class="about_us_mini_content_row">
+                    <img class="about_us_mini_content_image" src="image/Person.svg" alt="Image">
+                </div>
+                <div class="about_us_mini_content_row">
+                    <h3 class="about_us_mini_content_number">0</h3>
+                </div>
+                <div class="about_us_mini_content_row">
+                    <p class="about_us_mini_content_text">задоволених клієнтів</p>
+                </div>
+            </div>
+            <div class="about_us_mini_content">
+                <div class="about_us_mini_content_row">
+                    <img class="about_us_mini_content_image" src="image/Money.svg" alt="Image">
+                </div>
+                <div class="about_us_mini_content_row">
+                    <h3 class="about_us_mini_content_number">0</h3>
+                </div>
+                <div class="about_us_mini_content_row">
+                    <p class="about_us_mini_content_text">копійок прибутку</p>
+                </div>
+            </div>
+            <div class="about_us_mini_content">
+                <div class="about_us_mini_content_row">
+                    <img class="about_us_mini_content_image" src="image/Star.svg" alt="Image">
+                </div>
+                <div class="about_us_mini_content_row">
+                    <h3 class="about_us_mini_content_number">0</h3>
+                </div>
+                <div class="about_us_mini_content_row">
+                    <p class="about_us_mini_content_text">негативних відгуків</p>
+                </div>
+            </div>
+        </div>
+
+        </div>
+        <div class="welcome4">
+            <p>КОНТАКТИ</p>
+        </div>
+        <div  id="section_contacty" class="contactContainer">
+            <div class="row">
+                <input type="text" id="name" placeholder="Ім'я">
+                <input type="text" id="phone" placeholder="066-666-66-66">
+            </div>
+            <div class="row">
+                <input type="text" id="surname" placeholder="Прізвище">
+                <input type="text" id="email" placeholder="example@gmail.com">
+            </div>
+            <div class="row">
+                <input type="text" id="message" placeholder="Ваше повідомлення">
+            </div>
+            <div class="row">
+                <button class="submit-btn" onclick="openPopup()">ВІДПРАВИТИ</button>
+            </div>
+            <div class="footer">
+                <p>Всі права захищені</p>
+                <p>&copy; ОУН-М team</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to Lviv!</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        body {
+            min-height: auto;
+            background-blend-mode: overlay;
+            background-size: cover;
+            margin: 0;
+        }
+        
+        nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+            display: flex;
+            align-items: center;
+            height: 110px;
+            background-color: #FFFFFF;
+            padding-left: 20px;
+z-index: 999;
+opacity: 0.9;
+        }
+        nav img {
+      width: 224.32px;
+      height: 70px;
+            margin-right: 45px;
+        }
+        nav a {
+            font-family: 'Montserrat';
+            font-weight: normal;
+            font-size: 36px;
+            color: #000000;
+            margin-top: 31px;
+            margin-right: 45px;
+            text-decoration: none; /* Вимкнути підкреслення */
+        }
+        
+        .container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-image: url(image/background.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .mini_nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 160px;
+        }
+        
+        .mini_nav_container {
+            width: 23%;
+            padding: 10px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+            margin-right: 50px;
+        }
+        
+        .mini_nav_container {
+            width: 23%;
+            padding: 10px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+            margin-right: 25px;
+            margin-left: 25px;
+        }
+        
+        .mini_nav_container img {
+            display: block;
+            width: 100px;
+            margin: 0 auto;
+        }
+        
+        .mini_nav_container a {
+            text-decoration: none;
+            color: black;
+        }
+        
+        .mini_nav_container a:hover {
+            text-decoration: underline;
+            text-decoration-color: rgba(255, 255, 255, 0.82);
+        }
+        
+        .mini_nav_container p {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 36px;
+            color: rgba(255, 255, 255, 0.82);
+        }
+
+.content {
+  width: 1400px;
+  height: auto;
+  border-radius: 40px;
+  background: #FFFFFF;
+  margin-bottom: 75px;
+padding-bottom: 10px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.content h2 {
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 96px;
+line-height: 117px;
+color: #4B4B4B;
+}
+
+.content p {
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 32px;
+line-height: 39px;
+color: #878787;
+}
+
+.place {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 80%;
+  height: auto;
+ // background: #EEEEEE;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.image {
+  width: 510px;
+  height: 336px;
+  object-fit: cover;
+  border-radius: 20px;
+  margin: 10px;
+transition: transform 0.3s ease;
+}
+
+.zoomed {
+  transform: scale(1.2);
+}
+
+.description {
+  text-align: left;
+padding-left: 40px;
+}
+
+.place a {
+font-family: 'Montserrat';
+font-weight: 500;
+font-size: 36px;
+line-height: 44px;
+color: #292929;
+text-decoration: none;
+}
+
+.place p {
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 24px;
+color: #3D3D3D;
+}
+
+button {
+padding: 10px 20px;           
+            height: 70px;
+            background: linear-gradient(90.92deg, #84C4FF 0%, #C68EFF 101.47%);
+            box-shadow: 5px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 22px;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 29px;
+            margin: 10px;
+            transition: transform 0.3s;
+            color: #000000;
+}
+
+        button:hover {
+            transform: scale(1.1);
+        }
+        
+        button:active {
+            transform: scale(0.9);
+        }
+        
+    </style>
+    <script>
+function orderOpen() {
+window.open('order.html');
+}
+
+
+function zoomImage(image, newSrc) {
+  image.classList.add("zoomed");
+  image.src = newSrc;
+}
+
+function restoreImage(image, originalSrc) {
+  image.classList.remove("zoomed");
+  image.src = originalSrc;
+}
+
+    function openPopup() {
+        var width = 300;
+        var height = 200;
+        var left = (window.innerWidth - width) / 2;
+        var top = (window.innerHeight - height) / 2;
+        window.open('OK.html', 'We are working🛠', 'width=' + width + ',height=' + height + ',left=' + left + ',top=' + top);
+    }
+    </script>
+</head>
+<body>
+    <nav>
+        <img src="image/logo.png" alt="Logo" width="141" height="44">
+        <a href="index.html">Головна</a>
+        <a href="index.html">Про нас</a>
+        <a href="index.html">Контакти</a>
+        <a href="#">Замовити</a>
+    </nav>
+
+    <div class="container">
+        
+        <div class="mini_nav">
+            <div class="mini_nav_container">
+                <a href="#" onclick="openPopup()">
+                    <img src="image/Gear.svg" alt="Зображення">
+                </a>
+                <a href="#" onclick="openPopup()">
+                    <p>ВІДПОЧИНОК</p>
+                </a>
+            </div>
+            <div class="mini_nav_container">
+                <a href="#" onclick="openPopup()">
+                    <img src="image/Gear.svg" alt="Зображення">
+                </a>
+                <a href="#" onclick="openPopup()">
+                    <p>КУЛЬТУРА</p>
+                </a>
+            </div>
+            
+            <div class="mini_nav_container">
+                <a href="#" onclick="openPopup()">
+                    <img src="image/Gear.svg" alt="Зображення">
+                </a>
+                <a href="#" onclick="openPopup()">
+                    <p>СПОРТ</p>
+                </a>
+            </div>
+            <div class="mini_nav_container">
+                <a href="#" onclick="openPopup()">
+                    <img src="image/Gear.svg" alt="Зображення">
+                </a>
+                <a href="#" onclick="openPopup()">
+                    <p>ІСТОРІЯ</p>
+                </a>
+            </div>
+        </div>
+        <div class="content">
+  <div class="row">
+    <h2>ЦІКАВІ МІСЦЯ</h2>
+  </div>
+  <div class="row">
+    <p>Категорія</p>
+  </div>
+  <div class="row">
+    <div class="place">
+  <img src="image/old_ura.png" alt="Зображення" class="image" onmouseover="zoomImage(this, 'image/ura.png')" onmouseout="restoreImage(this, 'image/old_ura.png')">
+  <div class="description">
+    <a href="case.html">Собор святого Юра</a>
+    <p>Греко-католицький архикатедральний собор Святого Юра (площа Святого Юра, 5) - величний рококовий архітектурний ансамбль XVIII століття. У складі собору, дзвіниці, митрополичих палат і капітульних будівель. Розташований на високому узгір'ї над Львовом, гармонійно вписується в міський ландшафт. Підземна частина собору - крипта, містить саркофаги митрополита Андрея Шептицького та інших ієрархів. Дзвіниця Св. Юра - пам'ятка барокової архітектури, збудована у 1828 році. Унікальність дзвіниці полягає у тому, що тут знаходиться найстаріший дзвін на території України, відлитий у 1341 році. Тут щоденно проводяться Богослужіння, від ранку до вечора, на які ви можете завітати будь-коли.</p>
+  </div>
+</div>
+  </div>
+  <div class="row">
+    <div class="place">
+  <img src="image/old_politeh.png" alt="Зображення" class="image" onmouseover="zoomImage(this, 'image/politeh.png')" onmouseout="restoreImage(this, 'image/old_politeh.png')">
+  <div class="description">
+    <a href="case.html">Національний університет "Львівська політехніка"</a>
+    <p>Національний університет "Львівська політехніка" - найстаріший технічний заклад вищої освіти в Україні та Східній Європі. Будівля головного корпусу, зведена у 1877 році, має неокласичний стиль. Архітектор Юліан Захаревич працював над проєктом і був ректором університету. Колони, вікна та скульптури, що символізують інженерну науку, архітектуру та механіку, прикрашають головний корпус. Внутрішній інтер'єр у неоренесансному стилі вражає своєю красою, а актова зала на другому поверсі прикрашена картинами Яна Матейка про розвиток людської цивілізації. Університет нараховує 18 навчально-наукових інститутів, 10 коледжів, бібліотеку та багато іншого. Його популярність серед абітурієнтів і місце в рейтингах найкращих університетів постійно зростають.</p>
+  </div>
+</div>
+  </div>
+  <div class="row">
+    <div class="place">
+  <img src="image/old_opera.png" alt="Зображення" class="image" onmouseover="zoomImage(this, 'image/opera.png')" onmouseout="restoreImage(this, 'image/old_opera.png')">
+  <div class="description">
+    <a href="case.html">Львівська Національна опера</a>
+    <p>Історія Львівського оперного театру розпочалася у 1885 році, коли річку Полтву перетворили на підземний колектор і вирішили побудувати тут оперний театр. За переможця конкурсу було визнано архітектора Зигмунта Горголевського, який запропонував новаторський проект. Будівництво розпочалося у 1897 році, а театр був урочисто відкритий у 1900 році. Він представляє собою комбінацію ренесансу і бароко в стилі "віденського псевдоренесансу". Фасад вражає величчю, а в середині можна оцінити працю художників і скульпторів. В театрі працюють оперні солісти, балетна трупа, хор і симфонічний оркестр. У репертуарі - 22 опери, 3 оперети і 20 балетів, з перекладом на українську мову.</p>
+  </div>
+</div>
+  </div>
+  <div class="row">
+    <div class="place">
+  <img src="image/old_muz.png" alt="Зображення" class="image" onmouseover="zoomImage(this, 'image/muz.png')" onmouseout="restoreImage(this, 'image/old_muz.png')">
+  <div class="description">
+    <a href="case.html">Музей Шептицького</a>
+    <p>Національний музей у Львові імені Андрея Шептицького — найбільший художній музей України. Засновано в 1905 році Андреєм Шептицьким під назвою «Церковний музей». У 1913 році став Національним музеєм у Львові. Директором був Іларіон Свєнціцький. Збірки музею налічують 170 тис. одиниць, включаючи багату колекцію середньовічного сакрального мистецтва, давні пам'ятки писемності, графіку, українське мистецтво ХІХ–ХХ століть та сучасне мистецтво. Музей відіграє важливу роль у збереженні та популяризації української духовно-мистецької спадщини.</p>
+  </div>
+</div>
+  </div>
+  <div class="row">
+    <button class="first" onclick="orderOpen()">first</button>
+    <button class="btn1" onclick="orderOpen()">1</button>
+    <button class="last" onclick="orderOpen()">last</button>
+  </div>
+</div>
+    </div>
+</body>
+</html>
